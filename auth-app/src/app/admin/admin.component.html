@@ -1,0 +1,29 @@
+<p>Users</p>
+
+<table mat-table [dataSource]="users" class="mat-elevation-z8 demo-table">
+    <ng-container matColumnDef="username">
+      <th mat-header-cell *matHeaderCellDef>username</th>
+      <td mat-cell *matCellDef="let user">{{user.username}}</td>
+    </ng-container>
+    <ng-container matColumnDef="firstname">
+      <th mat-header-cell *matHeaderCellDef>firstname</th>
+      <td mat-cell *matCellDef="let user">{{user.firstname}}</td>
+    </ng-container>
+    <ng-container matColumnDef="lastname">
+      <th mat-header-cell *matHeaderCellDef>lastname</th>
+      <td mat-cell *matCellDef="let user">{{user.lastname}}</td>
+    </ng-container>
+    <ng-container matColumnDef="emailId">
+      <th mat-header-cell *matHeaderCellDef>emailId</th>
+      <td mat-cell *matCellDef="let user">{{user.emailId}}</td>
+    </ng-container>
+    <ng-container matColumnDef="bithdate">
+      <th mat-header-cell *matHeaderCellDef>bithdate</th>
+      <td mat-cell *matCellDef="let user">{{user.bithdate}}</td>
+    </ng-container>
+
+    
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
